@@ -1,79 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    table, th, td {
-  border:1px solid black; height: ;
-}
-  body {background-color:rgb(224, 224, 180)}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: #584b4b;
-}
-</style>
+    <title>Sito di Viaggi Unico</title>
+    <style>
+        body {background-color:rgb(224, 224, 180)}
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border:1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#more">More</a></li>
+    <li><a onclick="showContent('home')">Home</a></li>
+    <li><a onclick="showContent('pacchetti')">Pacchetti Viaggi</a></li>
+    <li><a onclick="showContent('contattaci')">Contattaci</a></li>
+    <li><a onclick="showContent('chisiamo')">Chi Siamo</a></li>
 </ul>
-  
-  </style>
 
-<title>Pacchetti viaggi</title>
-</head>
-<body>
-<h1>Pacchetti viaggi per l'Africa, Asia, Stati Uniti</h1>
+<div id="home" class="content" style="display:block;">
+    <h1>Benvenuti al nostro sito di viaggi dell'azienda LifeTime</h1>
+    <p>Esplorate con noi destinazioni mozzafiato, esperienze indimenticabili e pacchetti viaggio personalizzati per ogni vostra esigenza.</p>
+</div>
 
-  <p>In questo sito potrete trovare pacchetti viaggi in vari paesi con destinazioni esotiche. I pacchetti sono rivolti alle coppie, gruppi di amiche/amici.</p>
-  <h2>Africa</h2>
-  
-<h2>Listino prezzi</h2>
+<div id="pacchetti" class="content">
+    <h1>Pacchetti viaggi per Africa, Asia, Stati Uniti</h1>
+    <p>Scoprite i nostri pacchetti viaggi esclusivi, pensati per offrirvi un'esperienza unica nelle destinazioni più affascinanti del mondo.</p>
+    <h2>Listino prezzi</h2>
+    <table style="width:100%">
+        <tr>
+            <th>Destinazione</th>
+            <th>Durata</th>
+            <th>Prezzo</th>
+        </tr>
+        <tr>
+            <td>Zanzibar</td>
+            <td>7 giorni</td>
+            <td>€1000</td>
+        </tr>
+        <tr>
+            <td>Thailandia</td>
+            <td>10 giorni</td>
+            <td>€2000</td>
+        </tr>
+        <tr>
+            <td>New York</td>
+            <td>14 giorni</td>
+            <td>€2500</td>
+        </tr>
+    </table>
+</div>
 
-<table style="width:100%">
-  <tr>
-    <th>Hotel</th>
-    <th>Volo</th>
-    <th>Attività</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-</table>
+<div id="contattaci" class="content">
+    <h1>Contattaci</h1>
+    <p> Se avete domande o necessitate di ulteriori informazioni Non esitate a contattarci all'indirizzo email aambari.mayssam@iismariecorievr.it. </p>
+</div>
 
+<div id="chisiamo" class="content">
+    <h1>Chi Siamo</h1>
+    <p>Siamo un'azienda di viaggi (LifeTime), dedicata a trasformare ogni vostro viaggio in un'esperienza indimenticabile.</p>
+</div>
+
+<script>
+function showContent(id) {
+    var contents = document.getElementsByClassName('content');
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+    }
+    document.getElementById(id).style.display = "block";
+}
+</script>
 
 </body>
 </html>
