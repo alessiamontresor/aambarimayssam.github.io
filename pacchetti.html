@@ -7,28 +7,7 @@
     <style>
         h1 {text-align:center;}
         h2 {text-align:center;}
-        body {background-color:rgb(255, 255, 255)}
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-        li {
-            float: left;
-        }
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
+        
         .content {
             display: none;
             margin-top: 20px;
@@ -45,12 +24,35 @@
     </style>
 </head>
 <body>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pacchetti.html">Pacchetti</a></li>
-        <li><a href="altremete.html">Altre mete</a></li>
-        <li><a href="informazioni.html">Informazioni</a></li>
-    </ul>
+    <!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-xxlarge" onclick="w3_close()">Close &times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="pacchetti.html" class="w3-bar-item w3-button">Pacchetti</a>
+  <a href="altremete.html" class="w3-bar-item w3-button">Altre mete</a>
+  <a href="informazioni.html" class="w3-bar-item w3-button">Informazioni</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div>
+  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+</div>
+     
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+</div>
+      
   </br>
 </br>
     <h1>Pacchetti viaggi per Africa e Stati Uniti</h1>
