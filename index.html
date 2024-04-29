@@ -1,92 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LifeTime</title>
-    <style>
-        body {background-color:rgb(255, 255, 255)}
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-        li {
-            float: left;
-        }
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
-        .content {
-            display: none;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border:1px solid rgb(0, 0, 0);
-            border-collapse: collapse;
-            padding: 8px;
-        }
-        th {
-            background-color: #f3bfbf;
-            color: white;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>LifeTime</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-        body {
-  background-color: aquamarine;
-  color: #333;
-        margin: 0;
-        padding: 0;
-      }
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("immagini/statenisland.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-.container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+        
     </style>
 </head>
 <body>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="pacchetti.html">Pacchetti</a></li>
-    <li><a href="altremete.html">Altre mete</a></li>
-    <li><a href="informazioni.html">Informazioni</a></li>
-</ul>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block" style="display:none;z-index:5" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-xxlarge" onclick="w3_close()">Close &times;</button>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="pacchetti.html" class="w3-bar-item w3-button">Pacchetti</a>
+    <a href="altremete.html" class="w3-bar-item w3-button">Altre mete</a>
+    <a href="informazioni.html" class="w3-bar-item w3-button">Informazioni</a>
+  </div>
+  
+  <!-- Page Content -->
+  <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+  
+  <div>
+    <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  </div>
+       
+  <script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+  </div>
 
-<div class="container">
-    <h1>Benvenuti a nostro sito di viaggi dell'azienda LifeTime</h1>
-    <p style="text-align: justify;">Qui, ci impegniamo a trasformare i vostri sogni di avventura in realtà. Che si tratti di esplorare città affascinanti, rilassarsi su spiagge paradisiache o avventurarsi in destinazioni esotiche, siamo qui per accompagnarvi in ogni passo del vostro viaggio.
-
-        Immergetevi nella nostra vasta gamma di destinazioni, dalle iconiche mete turistiche. Esplorate le culture del mondo, assaporate le prelibatezze culinarie locali e create ricordi indelebili lungo il percorso. Con la nostra attenzione ai dettagli e la cura per l'esperienza del viaggiatore, ci impegniamo a rendere ogni viaggio un'esperienza straordinaria.
-        
-        Presso LifeTime, la vostra soddisfazione è la nostra priorità. Dal momento in cui pianificate il vostro viaggio fino al ritorno a casa, il nostro team esperto è qui per fornirvi assistenza e supporto. Abbiamo selezionato attentamente una vasta gamma di alloggi, attività e tour per soddisfare ogni preferenza e budget, garantendo un'esperienza di viaggio senza stress e indimenticabile.
-        
-        Scoprite il mondo con fiducia e tranquillità con LifeTime. Siamo qui per ispirarvi, guidarvi e creare esperienze di viaggio che superino ogni aspettativa. Non vediamo l'ora di accompagnarvi nel vostro prossimo viaggio straordinario!
-    </p>
-    <img src="immagini/zanzibar1.jpg">
+<div class="hero-image">
+    <div class="hero-text">
+        <h1 style="font-size:50px">Welcome to LifeTime</h1>
+        <button>Explore</button>
+      </div>
 </div>
+<h1>Benvenuti a nostro sito di viaggi dell'azienda LifeTime</h1>
+<p style="text-align: justify;">Qui, ci impegniamo a trasformare i vostri sogni di avventura in realtà. Che si tratti di esplorare città affascinanti, rilassarsi su spiagge paradisiache o avventurarsi in destinazioni esotiche, siamo qui per accompagnarvi in ogni passo del vostro viaggio.
 
-<script>
-function showContent(id) {
-    var contents = document.getElementsByClassName('content');
-    for (var i = 0; i < contents.length; i++) {
-        contents[i].style.display = "none";
-    }
-    document.getElementById(id).style.display = "block";
-}
-</script>
+    Immergetevi nella nostra vasta gamma di destinazioni, dalle iconiche mete turistiche. Esplorate le culture del mondo, assaporate le prelibatezze culinarie locali e create ricordi indelebili lungo il percorso. Con la nostra attenzione ai dettagli e la cura per l'esperienza del viaggiatore, ci impegniamo a rendere ogni viaggio un'esperienza straordinaria.
+    
+    Presso LifeTime, la vostra soddisfazione è la nostra priorità. Dal momento in cui pianificate il vostro viaggio fino al ritorno a casa, il nostro team esperto è qui per fornirvi assistenza e supporto. Abbiamo selezionato attentamente una vasta gamma di alloggi, attività e tour per soddisfare ogni preferenza e budget, garantendo un'esperienza di viaggio senza stress e indimenticabile.
+    
+    Scoprite il mondo con fiducia e tranquillità con LifeTime. Siamo qui per ispirarvi, guidarvi e creare esperienze di viaggio che superino ogni aspettativa. Non vediamo l'ora di accompagnarvi nel vostro prossimo viaggio straordinario!
+</p>
 <a href="esempio.html">Esempio</a>
 
 </body>
