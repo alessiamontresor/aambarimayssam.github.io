@@ -8,6 +8,25 @@
 h1 {text-align:center;}
 h2 {text-align:center;}
  
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .content {
   display: none;
   margin-top: 20px;
@@ -53,12 +72,17 @@ function w3_close() {
 </div>
       
    <h1>Altre mete</h1>
-   <div class="w3-row-padding w3-margin-top">
+  <div class="w3-row-padding w3-margin-top">
     <div class="w3-third">
       <div class="w3-card">
         <img src="immagini/zanzibar1.jpg" style="width:100%">
         <div class="w3-container">
-          <h5>Bangkok</h5>
+          <div class="dropdown">
+          <span>Bangkok</span>
+          <div class="dropdown-content">
+            <p>Hello World!</p>
+          </div>
+        </div>
         </div>
       </div>
     </div>
