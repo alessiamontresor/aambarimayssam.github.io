@@ -40,6 +40,22 @@ body, html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
 .footer {
     background-color:  rgb(186, 239, 255);
     color: #000000;
@@ -84,7 +100,9 @@ function w3_close() {
 <h1>Altre mete</h1>
 </br>
 <p style="text-align: center;">Il nostro gruppo mette a vostra disposizione altre destinazioni in tutto il mondo tra le quali potete scegliere per il vostro prossimo viaggio.</p>
+<button><a href="#Explore">Scopri subito le città selezionate per te!</a></button>
 </br>
+<section ID="Explore">
 <div class="w3-row-padding w3-margin-top">
   <div class="w3-third">
     <div class="w3-card" style="background-color: #f9f9f9;">
@@ -215,6 +233,7 @@ function w3_close() {
       <span>Petra</span></br><i class="material-icons">&#xe5c5;</i>
       <div class="dropdown-content">
         <p>Hello World!</p>
+      </section>
       </div>
     </div>
   </div>
